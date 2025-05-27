@@ -5,6 +5,7 @@ from utils.auth import get_authenticator_data
 from utils.localstorage import save_to_localstorage, clear_localstorage
 from streamlit_js_eval import streamlit_js_eval
 import json
+import time
 
 def init_authenticator():
     if "credentials" not in st.session_state or "authenticator" not in st.session_state:
@@ -18,6 +19,12 @@ def init_authenticator():
     return st.session_state["authenticator"]
 
 def check_auth_and_redirect():
+    # 인증 상태가 None이면 잠시 대기 후 재확인
+    for _ in range(5):
+        auth_status = st.session_state.get("authentication_status")
+        if auth_status is not None:
+            break
+        time.sleep(0.1)
     auth_status = st.session_state.get("authentication_status")
     if auth_status in [None, False]:
         st.switch_page("home.py")
