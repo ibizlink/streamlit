@@ -119,6 +119,7 @@ login_result = authenticator.login("main", key="Login", fields={
     "Username": "👤 Username",
     "Password": "🔑 Password"
 })
+st.write(st.login())
 
 auth_status = st.session_state.get("authentication_status")
 
