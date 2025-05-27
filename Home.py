@@ -21,21 +21,7 @@ st.set_page_config(
 # --- Custom Styles ---
 def inject_styles():
     st.markdown("""
-        <style>
-            [data-testid="stSidebarNav"], [data-testid="stSidebar"] { display: none !important; }
-            .hr { border: none; border-top: 1.5px solid #313337; margin: 2.5rem 0 2rem 0; }
-            .stButton > button {
-                width: 100%; height: 2.5rem; font-size: 1.08rem; border-radius: 7px;
-                margin-top: 0.6rem; background: #23242a; color: #fff; border: 1.5px solid #444;
-                font-weight: 500; transition: background 0.18s, border 0.18s;
-            }
-            .stButton > button:hover,
-            .stButton > button:active,
-            .stButton > button:focus {
-                background: #2563eb !important; border: 1.5px solid #2563eb !important; color: #fff !important;
-            }
-                       
-        </style>
+      
     """, unsafe_allow_html=True)
 
 inject_styles()
