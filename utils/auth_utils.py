@@ -20,7 +20,7 @@ def init_authenticator():
 def check_auth_and_redirect():
     auth_status = st.session_state.get("authentication_status")
     if auth_status in [None, False]:
-        st.switch_page("Home.py")
+        st.switch_page("home.py")
     return auth_status
 
 def load_and_sync_localstorage():
