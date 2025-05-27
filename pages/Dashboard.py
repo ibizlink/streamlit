@@ -39,7 +39,7 @@ with st.sidebar:
     st.image("assets/logo.png", width=200)
     st.markdown("### 내 커스텀 메뉴")
     if st.button("Dashboard", key="sidebar_dashboard"):
-        st.switch_page("pages/dashboard.py")
+        st.switch_page("pages/Dashboard.py")
     if st.button("리포트", key="sidebar_reports"):
         st.switch_page("pages/reports.py")
     if st.button("설정", key="sidebar_settings"):
