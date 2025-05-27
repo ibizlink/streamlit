@@ -44,7 +44,7 @@ with col1:
     register_clicked = st.button("📝 Register", use_container_width=True)
 with col2:
     if st.button("🔙 Back to Login", use_container_width=True):
-        st.switch_page("Home.py")
+        st.switch_page("home.py")
 
 if register_clicked:
     if not user_id or not password or not password_confirm:
